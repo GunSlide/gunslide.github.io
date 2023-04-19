@@ -1,0 +1,164 @@
+{
+margin: 0;
+padding: 0;
+box-sizing: border-box;
+}
+body {
+font-family: Arial, sans-serif;
+background-color: #f0f0f0;
+}
+
+.header {
+color: #fff;
+padding: 20px;
+text-align: center;
+background: linear-gradient(to bottom, #000000, #ffffff);
+}
+
+h1 {
+font-size: 36px;
+font-weight: bold;
+text-transform: uppercase;
+}
+
+main {
+padding: 20px;
+display: flex;
+flex-direction: column;
+align-items: center;
+}
+
+.info {
+max-width: 600px;
+margin-bottom: 40px;
+text-align: center;
+}
+
+.info h2 {
+font-size: 24px;
+font-weight: bold;
+margin-bottom: 20px;
+}
+
+.info p {
+font-size: 18px;
+line-height: 1.5;
+}
+
+.photos {
+max-width: 600px;
+margin-bottom: 40px;
+text-align: center;
+}
+
+.photos h2 {
+font-size: 24px;
+font-weight: bold;
+margin-bottom: 20px;
+}
+
+.photo-gallery {
+display: flex;
+flex-wrap: wrap;
+justify-content: center;
+}
+
+.photo-gallery img {
+width: 300px;
+height: 200px;
+object-fit: cover;
+margin: 10px;
+}
+
+footer {
+background-color: #333;
+color: #fff;
+padding: 20px;
+text-align: center;
+}
+
+footer p {
+font-size: 14px;
+}
+
+/* Animations */
+
+.photo-gallery img:hover {
+transform: scale(1.1);
+}
+
+.header {
+animation: fade-in 1s;
+}
+
+@keyframes fade-in {
+from {
+opacity: 0;
+}
+to {
+opacity: 1;
+}
+}
+
+.photo-gallery img {
+animation: slide-up 1s;
+}
+
+@keyframes slide-up {
+from {
+transform: translateY(100px);
+}
+to {
+transform: translateY(0);
+}
+}
+.landing-section {
+  padding: 50px;
+  background-color: #f0f0f0;
+  text-align: center;
+}
+
+.landing-section h2 {
+  font-size: 36px;
+  margin-bottom: 30px;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.button {
+  display: inline-block;
+  padding: 30px 33px;
+  border-radius: 50px;
+  text-decoration: none;
+  color: #204;
+  font-size: 18px;
+  font-weight: bold;
+  background-color: #970;
+  margin: 10px;
+  opacity: 0;
+  transform: translateY(50px);
+  animation: button-appear 0.5s ease-in-out forwards;
+}
+
+.button:nth-child(2) {
+  animation-delay: 0.1s;
+}
+
+.button:nth-child(3) {
+  animation-delay: 0.2s;
+}
+
+@keyframes button-appear {
+  from {
+    opacity: 0;
+    transform: translateY(50px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
